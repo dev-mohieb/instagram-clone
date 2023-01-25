@@ -1,9 +1,67 @@
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <img src="images/logo.png">
-        <script src="index.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Oldagram" class="logo">
+        <div class="search-area">
+            <img src="images/icon-search.svg" alt="">
+            <input type="search" name="search" id="search">
+        </div>
+        <div class="avatar-container">
+            <img 
+            src="images/user-avatar.png" alt="your avatar"
+            class="your-avatar">
+        </div>
+        
+    </header>
+    <main>
+        <section class="post">
+            <div class="container">
+                <section class="user-info">
+                    <a href="#" id="placeholder-profile">
+                        <img 
+                        src="images/avatar-vangogh.jpg" alt="Placeholder's avatar">
+                    </a>
+                    <article>
+                        <a class="user-name" href="#">
+                            Vincent van Gogh
+                        </a>
+                        <p class="user-location">
+                            Zudert, Netherlands
+                        </p>
+                    </article>
+                </section>
+            </div>
+
+            <img src="images/post-vangogh.jpg" alt="portrait of vincent">
+
+            <div class="container">
+                <section class="post-body">
+                    <div class="icons">
+                        <img src="images/icon-heart.png" alt="">
+                        <img src="images/icon-comment.png" alt="">
+                        <img src="images/icon-dm.png" alt="">
+                    </div>
+                    <a href="#" class="like-count">
+                        21,492 likes
+                    </a>
+                    <div class="desc">
+                        <p class="caption"><a href="#">vincey1853</a> just took a few mushrooms lol</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
 </html>

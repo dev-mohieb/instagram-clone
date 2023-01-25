@@ -66,6 +66,9 @@ main {
   .avatar-container {
     width: 127px;
   }
+  #search::-webkit-search-cancel-button{
+    display: none;
+}
 }
 
 .logo {
@@ -136,6 +139,11 @@ a {
 
 .icons img {
   width: 25px;
+  transition: scale .2s ease;
+}
+
+.icons img:hover {
+    scale: 1.1;
 }
 
 .caption {

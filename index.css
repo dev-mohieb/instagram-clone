@@ -123,7 +123,7 @@ main {
   border: none;
   width: 25px;
   height: 25px;
-  transition: scale 0.2s ease;
+  transition: transform 0.2s ease;
   cursor: default;
   outline: none;
 }
@@ -139,7 +139,7 @@ main {
 }
 
 .icons button:active {
-  scale: 0.9;
+  transform: scale(0.9);
 }
 
 /* Media queries */
@@ -194,6 +194,6 @@ main {
     cursor: pointer;
   }
   .icons button:hover {
-    scale: 1.1;
+    transform: scale(1.1);
   }
 }

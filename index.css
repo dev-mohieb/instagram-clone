@@ -138,7 +138,7 @@ main {
   background: url(images/icon-dm.png);
 }
 
-.icons button:active {
+.buttons button:active {
   transform: scale(0.9);
 }
 
@@ -193,7 +193,7 @@ main {
   .buttons button {
     cursor: pointer;
   }
-  .icons button:hover {
+  .buttons button:hover {
     transform: scale(1.1);
   }
 }

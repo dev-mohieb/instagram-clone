@@ -41,6 +41,10 @@ body * {
   font-style: normal;
 }
 
+a {
+  cursor: default;
+}
+
 /* Page layout */
 
 body {
@@ -119,8 +123,8 @@ main {
   border: none;
   width: 25px;
   height: 25px;
-  cursor: pointer;
   transition: scale 0.2s ease;
+  cursor: default;
   outline: none;
 }
 
@@ -181,6 +185,13 @@ main {
   }
   #search::-webkit-search-cancel-button {
     display: none;
+  }
+
+  a {
+    cursor: pointer;
+  }
+  .buttons button {
+    cursor: pointer;
   }
   .icons button:hover {
     scale: 1.1;

@@ -196,4 +196,7 @@ main {
   .buttons button:hover {
     transform: scale(1.1);
   }
+  .buttons button:active {
+    transform: scale(0.9);
+  }
 }

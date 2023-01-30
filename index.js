@@ -61,12 +61,12 @@ for (let i = 0; i < posts.length; i++) {
             <div class="container">
                 <section class="post-body">
                     <div class="buttons">
-                    <button class="like-btn" value="likeBtn"></button>
+                    <button class="like-btn" data-likes-plus="1"></button>
                     <button class="comment-btn"></button>
                     <button class="dm-btn"></button>
                     </div>
                     <div class="flex-container">
-                        <a href="#" class="likes" value="likesCount">
+                        <a href="#" class="likes" data-current-likes="${posts[i].likes}">
                             ${posts[i].likes}
                         </a>
                         <p>likes</p>
@@ -83,7 +83,18 @@ for (let i = 0; i < posts.length; i++) {
 
 // event listners -incomplete
 
-main.addEventListener("click", (e) => {
-  if (e.target.value === "likeBtn") {
-  }
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

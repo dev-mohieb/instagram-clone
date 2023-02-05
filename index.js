@@ -46,8 +46,10 @@ function render(data) {
                   <section class="user-info">
                       <a href="#">
                           <img 
-                          src="${post.avatar}" alt="${post.name}'s avatar"
-                          class="avatar">
+                          src="${post.avatar}"
+                          alt="${post.name}'s avatar"
+                          class="avatar"
+                          loading="lazy">
                       </a>
                       <article>
                           <a class="name" href="#">
@@ -63,17 +65,18 @@ function render(data) {
               <img
               src="${post.post}"
               alt="portrait of ${post.name}"
-              class="post-image">
+              class="post-image"
+              loading="lazy">
   
               <div class="container">
                   <section class="post-body">
                       <div class="buttons">
-                      <button class="like-btn" data-likes-plus="1"></button>
+                      <button class="like-btn"></button>
                       <button class="comment-btn"></button>
                       <button class="dm-btn"></button>
                       </div>
                       <div class="flex-container">
-                          <a href="#" class="likes" data-current-likes="${post.likes}">
+                          <a href="#" class="likes">
                               ${post.likes}
                           </a>
                           <p>likes</p>

@@ -34,31 +34,36 @@ const posts = () => {
   ];
 };
 
+render(posts());
+
+
 function render(data) {
-  for (let i = 0; i < data.length; i++) {
-    main.innerHTML += `
+
+  let postsTags = ''
+  for (let post of data) {
+    postsTags += `
       <section class="post">
               <div class="container">
                   <section class="user-info">
                       <a href="#">
                           <img 
-                          src="${data[i].avatar}" alt="${data[i].name}'s avatar"
+                          src="${post.avatar}" alt="${post.name}'s avatar"
                           class="avatar">
                       </a>
                       <article>
                           <a class="name" href="#">
-                              ${data[i].name}
+                              ${post.name}
                           </a>
                           <p class="location">
-                              ${data[i].location}
+                              ${post.location}
                           </p>
                       </article>
                   </section>
               </div>
   
               <img
-              src="${data[i].post}"
-              alt="portrait of ${data[i].name}"
+              src="${post.post}"
+              alt="portrait of ${post.name}"
               class="post-image">
   
               <div class="container">
@@ -69,20 +74,19 @@ function render(data) {
                       <button class="dm-btn"></button>
                       </div>
                       <div class="flex-container">
-                          <a href="#" class="likes" data-current-likes="${data[i].likes}">
-                              ${data[i].likes}
+                          <a href="#" class="likes" data-current-likes="${post.likes}">
+                              ${post.likes}
                           </a>
                           <p>likes</p>
                       </div>
                       <div class="flex-container">
-                          <a href="#" class="username">${data[i].username}</a>
-                          <p class="comment">${data[i].comment}</p>
+                          <a href="#" class="username">${post.username}</a>
+                          <p class="comment">${post.comment}</p>
                       </div>
                   </section>
               </div>
           </section>
      `;
   }
+  main.innerHTML = postsTags;
 }
-
-render(posts());

@@ -12,15 +12,18 @@ body * {
   padding: 10px;
 }
 
-.flex-container {
+.flex-container, .comment {
   display: flex;
   gap: 4px;
 }
 
+.comment {
+  /* flex-direction: column; */
+}
 
 /* Typography */
 
-.comment {
+.comment p {
   font-size: 14px;
   font-weight: 500;
 }
@@ -28,7 +31,7 @@ body * {
 .name,
 .likes,
 .flex-container,
-.flex-container a {
+.comments-section a {
   font-size: 14px;
   font-weight: 700;
   color: #000000;
@@ -118,7 +121,7 @@ main {
   justify-content: flex-start;
   gap: 12px;
 }
-.buttons button {
+.buttons button, .buttons label {
   background-size: 100%;
   border: none;
   width: 25px;
@@ -127,9 +130,12 @@ main {
   cursor: default;
   outline: none;
 }
+.buttons input {
+  display: none;
+}
 
 .like-btn {
-  background: url(images/icon-heart.png);
+  background: url(images/icon-heart.svg);
 }
 .comment-btn {
   background: url(images/icon-comment.png);
@@ -138,7 +144,7 @@ main {
   background: url(images/icon-dm.png);
 }
 
-.buttons button:active {
+.buttons > *:active {
   transform: scale(0.9);
 }
 
@@ -190,13 +196,13 @@ main {
   a {
     cursor: pointer;
   }
-  .buttons button {
+  .buttons > * {
     cursor: pointer;
   }
-  .buttons button:hover {
+  .buttons > *:hover {
     transform: scale(1.1);
   }
-  .buttons button:active {
+  .buttons > *:active {
     transform: scale(0.9);
   }
 }

@@ -37,9 +37,11 @@ function render(data) {
               <div class="container">
                   <section class="post-body">
                       <div class="buttons">
-                      <button class="like-btn"></button>
-                      <button class="comment-btn"></button>
-                      <button class="dm-btn"></button>
+                        <label class="like-btn"
+                        for="${post.username}""></label>
+                        <input type="checkbox" id="${post.username}" >
+                        <button class="comment-btn"></button>
+                        <button class="dm-btn"></button>
                       </div>
                       <div class="flex-container">
                           <a href="#" class="likes">
@@ -47,9 +49,11 @@ function render(data) {
                           </a>
                           <p>likes</p>
                       </div>
-                      <div class="flex-container">
-                          <a href="#" class="username">${post.username}</a>
-                          <p class="comment">${post.comment}</p>
+                      <div class="comments-section">
+                          <div class="comment">
+                            <a href="#" class="username">${post.username}</a>
+                            <p >${post.comment}</p>
+                          </div>
                       </div>
                   </section>
               </div>
@@ -58,3 +62,33 @@ function render(data) {
   }
   main.innerHTML = postsTags;
 }
+
+main.addEventListener('click', (e) => {
+        
+    if (e.target.classList[0] === 'like-btn') {
+        let likeLabel = e.target;
+        let likeBtn = likeLabel.nextElementSibling;
+        let buttonsEl = likeBtn.parentElement;
+        let likesContainer = buttonsEl.nextElementSibling;
+        let likesEl = likesContainer.children[0];
+        let likesElNum = parseInt( likesEl.textContent )
+        
+        if (!likeBtn.checked) {
+            likesEl.textContent = likesElNum + 1;
+            likeLabel.style.background = 'url(images/icon-heart-clicked.svg)';
+        } else if (likeBtn.checked) {
+            likesEl.textContent = likesElNum - 1;
+            likeLabel.style.background = 'url(images/icon-heart.svg)';
+        }
+    }
+    // add input and accept comments on comment button click //
+
+    // if (e.target.classList[0] === 'comment-btn') {
+    //     let commentBtn = e.target;
+    //     let buttonsEl = commentBtn.parentElement;
+    //     let commentsContainer = buttonsEl.nextElementSibling.nextElementSibling;
+        
+
+    // }
+    
+})

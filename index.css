@@ -17,9 +17,6 @@ body * {
   gap: 4px;
 }
 
-.comment {
-  /* flex-direction: column; */
-}
 
 /* Typography */
 
@@ -115,6 +112,16 @@ main {
   gap: 10px;
 }
 
+.comment {
+  border: 1px solid red;
+  width: 100%;
+}
+.username {
+  min-width: 20%;
+}
+.user-comment input {
+  /* width: 100%; */
+}
 /* Post buttons */
 .buttons {
   display: flex;

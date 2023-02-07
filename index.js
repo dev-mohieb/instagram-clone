@@ -52,7 +52,7 @@ function render(data) {
                       <div class="comments-section">
                           <div class="comment">
                             <a href="#" class="username">${post.username}</a>
-                            <p >${post.comment}</p>
+                            <p>${post.comment}</p>
                           </div>
                       </div>
                   </section>
@@ -80,15 +80,5 @@ main.addEventListener('click', (e) => {
             likesEl.textContent = likesElNum - 1;
             likeLabel.style.background = 'url(images/icon-heart.svg)';
         }
-    }
-    // add input and accept comments on comment button click //
-
-    // if (e.target.classList[0] === 'comment-btn') {
-    //     let commentBtn = e.target;
-    //     let buttonsEl = commentBtn.parentElement;
-    //     let commentsContainer = buttonsEl.nextElementSibling.nextElementSibling;
-        
-
-    // }
-    
+    }    
 })

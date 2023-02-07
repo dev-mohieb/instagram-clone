@@ -112,11 +112,6 @@ main {
   gap: 10px;
 }
 
-.comment {
-  border: 1px solid red;
-  width: 100%;
-}
-
 /* Post buttons */
 .buttons {
   display: flex;

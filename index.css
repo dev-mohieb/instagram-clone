@@ -116,12 +116,7 @@ main {
   border: 1px solid red;
   width: 100%;
 }
-.username {
-  min-width: 20%;
-}
-.user-comment input {
-  /* width: 100%; */
-}
+
 /* Post buttons */
 .buttons {
   display: flex;
